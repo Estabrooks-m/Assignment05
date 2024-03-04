@@ -54,11 +54,22 @@ class BasicMathOperations:
         triangle= print("Hypotenuse= ", t)
         return (triangle)
         
-    #def area(self, num1, num2):
+    def area(self, num1, num2):
+        a= num1 * num2
+        area= round (a, 3)
+        rect= print("Area =", area)
+        return (rect)
         
-    #def power(self, num1):
+    def power(self, num1, num2):
+        p= num1 ** num2
+        power= round(p, 3)
+        num= print(num1, "to the power", num2, "is", power)
+        return (num)
         
-    #def Type(self, arg):
+    def Type(self, arg):
+        typ= type(arg)
+        argument= print("'",arg, "'",  "is a ", typ)
+        return (argument)
         
 def main():
     #Get user name and welcome them
@@ -72,6 +83,9 @@ def main():
           "Take a factorial (4), display all number from 0 to your number (5), find a hypotenbuse (6),"
           "Find the area of a rectangle (7), take the power of a numer (8), or find the argument type (9) "))
     
+    while (pick != 1 and pick != 2 and pick != 3 and pick != 4 and pick != 5 and pick != 6 and pick != 7 and pick !=8 and pick !=9):
+        pick= int(input("Invalid input try again "))
+
     if (pick == 1):
         num1= int(input("Pick a number "))
         num2= int(input("Pick another number "))
@@ -84,7 +98,7 @@ def main():
         print("You can add (+), subtract (-), multiply (*) or divide (/)")
         op=str((input("Which one do you want to do ")))
         while (op != "+" and op != "-" and op != "*" and op != "/"):
-            op= input("Invalid input try again")
+            op= input("Invalid input try again ")
         send= BasicMathOperations()
         print(send.performOp(num1, num2, op))           
               
@@ -104,11 +118,30 @@ def main():
         print(num.count(num1))
     
     elif (pick ==6):
-        num1= int(input("Pick a number "))
-        num2= int(input("Pick another number "))
+        num1= float(input("Pick a number "))
+        num2= float(input("Pick another number "))
         num= BasicMathOperations()
         print(num.hypot(num1,num2))
-               
+    
+    elif (pick== 7):
+        num1= float(input("Pick a number "))
+        num2= float(input("Pick another number "))
+        num= BasicMathOperations()
+        print(num.area(num1,num2))
+    elif (pick== 8):
+        num1= float(input("Pick a number "))
+        num2= int(input("To what power do you want to compute "))
+        num= BasicMathOperations()
+        print(num.power(num1,num2))
+    
+    elif (pick == 9):
+        argu= input("Enter an argument ")
+        arg= BasicMathOperations()
+        print(arg.Type(argu))
+    
+        
+    end= print("")
+    return(end)        
     
 main()
         
