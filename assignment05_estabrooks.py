@@ -32,14 +32,15 @@ class BasicMathOperations:
     def Type(self, arg):
         
 def main():
+    first= str(input("Enter your first name"))
+    last= str(input("Enter your last name"))
+    name= fist + last
+    print(name)
     
     
     
     
-    
-    
-    
-    
+      
     
     
 main()
