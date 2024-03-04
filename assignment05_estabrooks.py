@@ -35,11 +35,24 @@ class BasicMathOperations:
         num= num1**2
         return(num)        
         
-    #def factorial(self, num1):
+    def factorial(self, num1):
+        num= 1
+        for i in range (1, num1+1):
+            num = num * i
+        fact= print(num1, "! =", num)
+        return(fact)
+            
         
-    #def count(self, num1):
+    def count(self, num1):
+        for i in range (0, num1+1):
+            count= print (i, "", end= "")
+        return(count)
         
-    #def hypot(self, num1, num2):
+    def hypot(self, num1, num2):
+        hypot= (num1**2 + num2**2)**.5
+        t= round(hypot, 3)
+        triangle= print("Hypotenuse= ", t)
+        return (triangle)
         
     #def area(self, num1, num2):
         
@@ -79,7 +92,23 @@ def main():
         num1= float(input("Pick a number "))
         num= BasicMathOperations()
         print(num.square(num1))
+    
+    elif (pick == 4):
+        num1= int(input("Pick a number "))
+        num= BasicMathOperations()
+        print(num.factorial(num1))
         
+    elif (pick == 5):
+        num1= int(input("Pick a number "))
+        num= BasicMathOperations()
+        print(num.count(num1))
+    
+    elif (pick ==6):
+        num1= int(input("Pick a number "))
+        num2= int(input("Pick another number "))
+        num= BasicMathOperations()
+        print(num.hypot(num1,num2))
+               
     
 main()
         
