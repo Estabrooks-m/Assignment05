@@ -67,9 +67,17 @@ class BasicMathOperations:
         return (num)
         
     def Type(self, arg):
-        typ= type(arg)
-        argument= print("'",arg, "'",  "is a ", typ)
+        if isinstance(arg, str):
+            argument= print(arg, "is a str")
+        elif isinstance(arg, int):
+            argument= print(arg, "is an int")
+        elif isinstance (arg, float):
+            argument= print(arg, "is a float")
+        else:
+            argument= print("Argument is not a str, int, or float")
+            
         return (argument)
+    
         
 def main():
     #Get user name and welcome them
@@ -135,7 +143,7 @@ def main():
         print(num.power(num1,num2))
     
     elif (pick == 9):
-        argu= input("Enter an argument ")
+        argu= input("Enter an value ")
         arg= BasicMathOperations()
         print(arg.Type(argu))
     
