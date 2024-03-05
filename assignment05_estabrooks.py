@@ -98,8 +98,8 @@ def main():
     
     #have user pick which operation they would like to perform
     pick= int(input("Would you like to: Add numbers (1), perform an operation (2), square a number (3),"
-          "Take a factorial (4), display all number from 0 to your number (5), find a hypotenbuse (6),"
-          "Find the area of a rectangle (7), take the power of a numer (8), or find the argument type (9) "))
+          "Take a factorial (4), display all number from 0 to your number (5), find a hypotenuse (6),"
+          "Find the area of a rectangle (7), take the power of a number (8), or find the argument type (9) "))
     
     #If they pick a number that is not 1-9 show and error and have them try again
     while (pick != 1 and pick != 2 and pick != 3 and pick != 4 and pick != 5 and pick != 6 and pick != 7 and pick !=8 and pick !=9):
